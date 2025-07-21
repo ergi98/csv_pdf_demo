@@ -12,7 +12,7 @@ def find_the_phone_number():
     with open(file=os.path.join('exercise_materials', 'find_the_link.csv'), encoding="utf-8") as csv_file:
       csv_data = csv.reader(csv_file)
       row_index = 0
-      for data_row in csv_data:
+      for row_index, data_row in enumerate(csv_data):
         for row_item_index in range(len(data_row)):
           if row_index == row_item_index:
             google_drive_url_chars.append(data_row[row_item_index])
